@@ -1,4 +1,4 @@
-package lab_00_setup;
+package lab_01_setup;
 
 
 public class helloJava{
