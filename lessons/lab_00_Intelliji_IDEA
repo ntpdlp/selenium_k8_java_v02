@@ -1,0 +1,25 @@
+Menu > Settings :
+    1)search "psvm" -> will show hot key to main() method declaration
+       Technology term: "Live Template"
+       You can add a new "live template" as well.
+
+
+================================
+Setup JAVA_HOME on MacOS:
+1)check what kind of shell you are using: #echo $SHELL
+2)if return zsh then #vi .zshrc
+3)Add JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk-xx..x.jdk/Contents/Home
+4)Edit PATH = $PATH:$JAVA_HOME/bin
+  export PATH
+
+
+================================
+Setup JAVA_HOME on WinOS:
+1) Edit environment variable
+2) add JAVA_HOME = C:\Program Files\Java\jdk-xxx
+3) edit PATH , add C:\Program Files\Java\jdk-xxx\bin
+
+
+
+================================
+Hotkey on IntellijIDEA
