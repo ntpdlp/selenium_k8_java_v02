@@ -31,7 +31,11 @@ public class lab0200_operatorLearning {
         final int OPENINGTIME = 8;
 
 
-        System.out.println(10 & 8);
+        // & and &&
+        //& : bitwise operator
+        //&& : logical operator
+        System.out.println(10 & 8); // bitwise &, return 8
+        System.out.println(true && false); //logical &&, return false
         /*bitwise
         1 1 1 1
          8  4  2 1
@@ -40,6 +44,10 @@ public class lab0200_operatorLearning {
          10&08 = 1000
 
          */
+
+        //| and ||
+        System.out.println(10 | 8); //bitwise or , return 10
+        System.out.println(true || false); //logical || , return true
 
 
 
