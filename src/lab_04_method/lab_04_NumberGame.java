@@ -18,8 +18,9 @@ public class lab_04_NumberGame {
         System.out.println("4. Search number");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("");
-        return 0;
+        System.out.println("Enter your choice: ");
+        int choice = scanner.nextInt();
+        return choice;
     }
 
 }
