@@ -16,9 +16,10 @@ public class lab02_JavaStringOperator {
         System.out.println(name.substring(0,0));  //
         System.out.println(name.substring(0,name.length())); //Robert
 
-        //indexOf
+        //indexOf(char c) , indexOf(String str)
         System.out.println(name.indexOf('t')); //5
         System.out.println(name.indexOf('d')); //-1
+        System.out.println(name.indexOf("Rob"));
 
 
         //startsWith
@@ -77,6 +78,24 @@ public class lab02_JavaStringOperator {
         System.out.println(today01);
         System.out.println(today02);
         System.out.println(today03);
+
+        //split(), if using multiple separators then using a pipe | between them, use \\ before dot.
+        String[] outputStrs = "hello,strings can be fun. They have many uses.".split(" |,|\\.");
+        for (String item : outputStrs) {
+            System.out.println(item);
+        }
+
+        //compare 2 strings in Java
+        //concept:
+        //since a String variable does not hold a String value, it holds a reference to the instance of String
+        String s1 = "I love";
+        s1 += " Java";
+
+        String s2 = "I";
+        s2 += " love Java";
+
+        System.out.println(s1==s2); //false
+        System.out.println(s1.equals(s2)); //true
 
     }
 }
