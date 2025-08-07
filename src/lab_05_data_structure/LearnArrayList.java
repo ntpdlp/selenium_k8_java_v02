@@ -1,60 +1,60 @@
 package lab_05_data_structure;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class LearnArrayList {
 
     public static void main(String[] args) {
-        /*
+
         ArrayList<Integer> myNums = new ArrayList<>();
 
-        //add
+        //common methods: add(),get(),set(),remove(),size()
+        //use index or iterator to loop through elements
         myNums.add(1);
-        myNums.add(Integer.valueOf(1));
         myNums.add(5);
+        myNums.add(8);
         myNums.add(9);
-        myNums.add(9);
+        System.out.println("size at initial: " + myNums.size()); //4
         System.out.println(myNums);
-        
 
-        //remove at index only
+        Integer myChoice = myNums.get(1); //get(index) >> 5
+        myNums.set(1,50); //set(index,value)
+        System.out.println("update value at 1 position, old value: " + myChoice); //5
+        System.out.println(myNums);
+
+        myNums.remove(0); // remove(index)
+        System.out.println("size after removing first element: " + myNums.size()); //3
+        System.out.println(myNums);
+
+
+        //loop through elements by using index loop
         int myNumsSize = myNums.size();
         for (int index = 0; index < myNumsSize; index++) {
-            if(myNums.get(index) == 9){
-                myNums.remove(index);
-                myNumsSize--;
-                index--;
-            }
+            System.out.print(myNums.get(index) + "\t");
         }
-        System.out.println(myNums);
-        String abc = "abc";
+        System.out.println("\r\n------------------");
 
-        //remove any duplicated value in a list
-        myNums.add(8);
-
-        myNums.add(8);
-        myNums.add(2);
-        myNums.add(5);
-        myNums.add(5);
-        for (int index = 0; index < myNums.size(); index++) {
-            int temp = myNums.get(index);
-            if(temp == 8){
-                myNums.remove(index);
-                index--;
-            }
+        //loop through elements by using Iterator
+        Iterator<Integer> iterMyNums = myNums.iterator();
+        while(iterMyNums.hasNext()){
+            System.out.print(iterMyNums.next() + "\t");
         }
-        System.out.println(myNums);
+        System.out.println("\r\n------------------");
 
 
-        Set<Integer> noDuplidated = new HashSet<>(myNums);
-        List<Integer> finalList = new ArrayList<>(noDuplidated);
-        System.out.println(noDuplidated);
-        System.out.println(finalList);
-        */
+        //sort
+        List<String> names = new ArrayList<>();
+        names.add("Jamie");
+        names.add("Peggy");
+        names.add("Tom");
+        names.add("Adnan");
+        names.add("Vovo");
+        System.out.println("Before: " + names);
+        Collections.sort(names);
+        System.out.println("After sorting: " + names);
 
+        Collections.sort(names,Collections.reverseOrder());
+        System.out.println("Reverse Order sorting: " + names);
 
 
     }
