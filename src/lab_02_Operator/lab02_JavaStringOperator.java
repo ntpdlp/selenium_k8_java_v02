@@ -97,5 +97,8 @@ public class lab02_JavaStringOperator {
         System.out.println(s1==s2); //false
         System.out.println(s1.equals(s2)); //true
 
+
+
+
     }
 }
