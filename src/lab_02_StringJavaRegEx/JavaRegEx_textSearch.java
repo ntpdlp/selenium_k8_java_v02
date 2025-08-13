@@ -1,4 +1,4 @@
-package lab_02_JavaRegEx;
+package lab_02_StringJavaRegEx;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
