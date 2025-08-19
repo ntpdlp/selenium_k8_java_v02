@@ -6,9 +6,9 @@ public class TestCho {
 
         //these instances calling instance methods
         Cho choCon = new ChoCon();
-        choCon.sayHello();
 
         Cho choMe = new ChoMe();
+        choCon.sayHello();
         choMe.sayHello();
 
 
