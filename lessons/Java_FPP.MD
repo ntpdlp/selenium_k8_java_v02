@@ -30,3 +30,34 @@ Control Flow:
 Arrays:
     Array copying: System.arraycopy()
     Array sorting: Arrays.sort(arr);
+
+==========================================================================================
+L3: OBJECTS & CLASS
+The Object-Oriented Paradigm:
+    Thinking of every object as providing a set of services which are specified in its interface.
+    A Class defines the "properties" and "behaviors" for objects.
+    A Class is a model, template or blue print from which obj are created.
+
+OO Concept:
+Encapsulation: obj interact with other obj via their interfaces (providing list of services). 
+               The data that obj owns and
+               the way that it manages that data are hidden from view (information hiding)
+Inheritance:
+Modifiers: are used to indicate the visibility of attribute/methods of an object
+
+Template for User-Defined Class
+    Creating new object
+    Access data and operation in an obj
+    Access modifier
+    Destroy obj: There is no destructors in Java, JVM provides a garbage collector
+Example some classes in Java library: Date, GregorianCalendar, LocalDate
+The 'this' keyword
+Mutators(setters) and Accessors(getters): important example of 'public method'
+How to make a Class Immutable *****STOP HERE****
+Boxed Primitives and Autoboxing
+Enum Constants
+Static field and method
+How obj and variable are stored in Memory
+Call by Reference vs Call by Value
+Import class
+Principles of Good Class Design

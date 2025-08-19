@@ -1,0 +1,11 @@
+OOP = Object-Oriented Paradigm:
+
+1) Think of every object will provide "list of services" which are specified in its interface
+
+2) Class Diagram:
+   - Class is a model, template, blue-print which object is created from
+   - Modifiers are used to indicate visibility of attributes:
+          + : public
+          # : protected
+          - : private
+          ~ : default
