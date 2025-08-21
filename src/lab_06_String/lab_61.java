@@ -16,6 +16,5 @@ public class lab_61 {
         //create patter to get value of hour, minute
         int totalMins = Integer.valueOf(hours)*60 + Integer.valueOf(mins);
         System.out.println("Total in minutes: " + totalMins);
-
     }
 }
