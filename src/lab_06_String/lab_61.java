@@ -8,13 +8,12 @@ public class lab_61 {
     public static void main(String[] args) {
         String input = "2hrs and 5 minutes";
 
-        Pattern pattern = Pattern.compile("[^0-9]",Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(input);
-        String output = matcher.replaceAll("");
-        String hours = output.substring(0,1);
-        String mins = output.substring(1,2);
-        System.out.println(hours);
-        System.out.println(mins);
+        //split strings hour, minute
+        String[] inputSplited = input.split("and");
+        String hours = inputSplited[0].replaceAll("[^0-9]","");
+        String mins = inputSplited[1].replaceAll("[^0-9]","");
+
+        //create patter to get value of hour, minute
         int totalMins = Integer.valueOf(hours)*60 + Integer.valueOf(mins);
         System.out.println("Total in minutes: " + totalMins);
 
