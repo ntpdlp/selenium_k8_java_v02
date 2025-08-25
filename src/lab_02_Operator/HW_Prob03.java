@@ -5,7 +5,8 @@ public class HW_Prob03 {
     public static void main(String[] args) {
 
         //column names: productId, name,numInStock,provider,pricePerUnit
-        String records = "231A,Light Bulb,123,Wilco,1.75:"+
+        String records =
+                "231A,Light Bulb,123,Wilco,1.75:"+
                 "113D,Hairbrush,19,Aamco,3.75:"+
                 "521W,Shampoo,24,Acme,6.95:"+
                 "440Q,Dishwashing Detergent,20,Wilco,1.75:"+
@@ -30,7 +31,8 @@ public class HW_Prob03 {
                 "933W,Cat Toy,15,Wilco,2.35:"+
                 "215A,Hair Ball,0,Little Jimmy,0.00:";
 
-        String[] detailRecords = records.split(",|:");
+        System.out.println("ProductID list are: ");
+        String[] detailRecords = records.split("[,:]");
         final int STEPS = 5;
         for (int item = 0; item < detailRecords.length; item+=STEPS) {
             System.out.println(detailRecords[item]);
