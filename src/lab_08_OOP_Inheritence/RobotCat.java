@@ -1,4 +1,4 @@
-package lab_07_OOP_Inheritence;
+package lab_08_OOP_Inheritence;
 
 public class RobotCat {
 
