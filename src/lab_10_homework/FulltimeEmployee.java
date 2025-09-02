@@ -9,8 +9,9 @@ public class FulltimeEmployee extends Employee{
         this.setSalary();
     }
 
+    //protected field from super class: y do la o sub-class su dung duoc, update duoc field 'salary' nay
     @Override
     public void setSalary() {
-        this.salary = FULLTIME_EMPLOYEE_SALARY;
+        salary = FULLTIME_EMPLOYEE_SALARY;
     }
 }
