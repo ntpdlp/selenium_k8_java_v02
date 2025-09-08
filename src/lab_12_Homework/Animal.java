@@ -5,9 +5,15 @@ public abstract class Animal {
     protected int maxSpeed;
 
     Animal(){
-
     }
 
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public void setSpeedBehavior(SpeedBehavior speedBehavior) {
+        this.speedBehavior = speedBehavior;
+    }
 
     public int speed(){
         int randomSpeed = speedBehavior.generateSpeed();
@@ -17,8 +23,6 @@ public abstract class Animal {
         return randomSpeed;
    }
 
-    public void setSpeedBehavior(SpeedBehavior speedBehavior) {
-        this.speedBehavior = speedBehavior;
-    }
+
 
 }
