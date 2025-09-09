@@ -10,6 +10,7 @@ public class DataFactory {
         try (FileInputStream fileInputStream = new FileInputStream(fileName);
              InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
              BufferedReader bufferedReader = new BufferedReader(inputStreamReader);) {
+<<<<<<< HEAD
             String currentLine = bufferedReader.readLine();
             while(currentLine != null)
             {
@@ -17,6 +18,15 @@ public class DataFactory {
                 System.out.println(person.toString());
                 currentLine = bufferedReader.readLine();
             }
+=======
+             String currentLine = bufferedReader.readLine();
+             while(currentLine != null)
+             {
+                 Person person = processRawDataLine(currentLine);
+                 System.out.println(person.toString());
+                 currentLine = bufferedReader.readLine();
+             }
+>>>>>>> 27c5eb8c8aef3d0bdf3d69dfaf79e98649a8a232
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -30,7 +40,14 @@ public class DataFactory {
         System.out.println(fileAbsolutePath);
 
         //version with create simple File, then use Scanner to read data from that file
+<<<<<<< HEAD
         System.out.println(readFileSimple(fileAbsolutePath));
+
+        //version with InputStreamFile
+        readFile(fileAbsolutePath);
+=======
+        readFileSimple(fileAbsolutePath);
+>>>>>>> 27c5eb8c8aef3d0bdf3d69dfaf79e98649a8a232
 
         //version with InputStreamFile
         readFile(fileAbsolutePath);
