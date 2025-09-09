@@ -9,7 +9,13 @@ public class DataFactory {
         try (FileInputStream fileInputStream = new FileInputStream(fileName);
              InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
              BufferedReader bufferedReader = new BufferedReader(inputStreamReader);) {
-
+             String currentLine = bufferedReader.readLine();
+             while(currentLine != null)
+             {
+                 Person person = processRawDataLine(currentLine);
+                 System.out.println(person.toString());
+                 currentLine = bufferedReader.readLine();
+             }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -21,7 +27,12 @@ public class DataFactory {
         String userDir = System.getProperty("user.dir");
         String fileAbsolutePath = userDir.concat("/").concat(fileRelativePath);
         System.out.println(fileAbsolutePath);
+
+        //version with create simple File, then use Scanner to read data from that file
         readFileSimple(fileAbsolutePath);
+
+        //version with InputStreamFile
+        readFile(fileAbsolutePath);
 
     }
 
@@ -41,17 +52,16 @@ public class DataFactory {
     }
 
     public static Person processRawDataLine(String dataLine) {
-        String[] data = null;
-        Person p = null;
+        String[] data;
         try {
             data = dataLine.split("[;]");
             String name = data[0];
             int age = Integer.parseInt(data[1]);
             long salary = Long.parseLong(data[2]);
-            p = new Person(name, age, salary);
+            return new Person(name, age, salary);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return p;
+        return null;
     }
 }
