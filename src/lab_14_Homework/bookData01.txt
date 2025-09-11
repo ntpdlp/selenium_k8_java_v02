@@ -1,0 +1,3 @@
+Book{isbn='1234', title='Clean Code', author='Robert Martin', year=2009}
+Book{isbn='5678', title='Agile Software', author='Stevan Zevanovic', year=2015}
+Book{isbn='9012', title='Java HeadFirst', author='Robert Martin', year=2009}
