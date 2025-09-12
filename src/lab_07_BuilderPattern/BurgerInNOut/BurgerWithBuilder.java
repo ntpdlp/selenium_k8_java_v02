@@ -1,4 +1,4 @@
-package lab_07_OOP_Encapsulation.BurgerInNOut;
+package lab_07_BuilderPattern.BurgerInNOut;
 
 public class BurgerWithBuilder {
 

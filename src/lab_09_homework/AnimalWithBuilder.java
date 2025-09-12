@@ -1,8 +1,5 @@
 package lab_09_homework;
 
-import lab_07_OOP_Encapsulation.BurgerInNOut.BurgerWithBuilder;
-import lab_08_Homework.animal.AnimalController;
-
 import java.security.SecureRandom;
 
 public class AnimalWithBuilder {

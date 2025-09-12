@@ -1,4 +1,4 @@
-package lab_07_OOP_Encapsulation.BuilderPattern;
+package lab_07_BuilderPattern.HouseBuilderV02;
 
 public class TestHouseBuilder {
     public static void main(String[] args) {
