@@ -1,5 +1,7 @@
 package lab_06_OOP_GameStartUp.simpleVersion;
 
+import lab_06_OOP_GameStartUp.GameHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,18 +19,18 @@ public class SimpleStartupTestDrive {
         SimpleStartup dot = new SimpleStartup();
 
         //1.assign location for Startup
-        ArrayList<Integer> locations = gameHelper.generateLocation();
+        ArrayList<String> locations = gameHelper.generateLocation();
         dot.setLocationCells(locations);
 
         //2.check guess
-        List<Integer> remainingLocations = new ArrayList<>();
-        for (int location : locations) {
-            remainingLocations.add(Integer.valueOf(location));
+        ArrayList<String> remainingLocations = new ArrayList<>();
+        for (String location : locations) {
+            remainingLocations.add(location);
         }
         int numOfGuesses = 0;
         String testResult = "failed";
         while (!dot.isStartupSunk()){
-            int userGuess = gameHelper.getUserInput(scanner);
+            String userGuess = gameHelper.getUserInput(scanner);
             numOfGuesses++;
             testResult = dot.checkYourself(userGuess);
             if (testResult.equals("kill")){

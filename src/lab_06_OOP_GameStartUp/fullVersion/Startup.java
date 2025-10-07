@@ -1,10 +1,28 @@
-package lab_06_OOP_GameStartUp.simpleVersion;
+package lab_06_OOP_GameStartUp.fullVersion;
 
 import java.util.ArrayList;
 
-public class SimpleStartup {
+public class Startup {
+    /*
+    Properties
+     */
     private ArrayList<String> locationCells;
     private int numOfHits;
+    private String name;
+
+
+    /*
+    Methods
+     */
+
+    @Override
+    public String toString() {
+        return "Startup{" +
+                "locationCells=" + locationCells +
+                ", numOfHits=" + numOfHits +
+                ", name='" + name + '\'' +
+                '}';
+    }
 
     public ArrayList<String> getLocationCells() {
         return locationCells;
@@ -16,6 +34,14 @@ public class SimpleStartup {
 
     public int getNumOfHits() {
         return numOfHits;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 
     public void setNumOfHits(int numOfHits) {
@@ -43,7 +69,6 @@ public class SimpleStartup {
             }
         }//end_if
 
-        System.out.println(result);
         return result;
     }
 
