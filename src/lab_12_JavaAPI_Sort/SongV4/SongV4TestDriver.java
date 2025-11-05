@@ -12,7 +12,7 @@ public class SongV4TestDriver {
         songs.add(new Song("Winter","Johnson"));
         songs.add(new Song("Winter","Johnson"));
 
-        //based on title
+        //based on title: lambda sorted by Comparator
         songs.sort((song1,song2) -> song1.getTitle().compareTo(song2.getTitle())); // A..Z
         System.out.println(songs);
 
