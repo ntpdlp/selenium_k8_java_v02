@@ -1,11 +1,11 @@
-package lab_14_GUI_Hello.HelloJPanel;
+package lab_14_GUI_Hello.PanelButton;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SimpleGUI03 implements ActionListener {
+public class SimpleGUI03_PanelButton implements ActionListener {
     private JButton button;
     private JFrame frame;
 
@@ -33,7 +33,7 @@ public class SimpleGUI03 implements ActionListener {
     }
 
     public static void main(String[] args){
-        new SimpleGUI03().go();
+        new SimpleGUI03_PanelButton().go();
     }
 
 }

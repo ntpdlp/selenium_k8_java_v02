@@ -1,4 +1,4 @@
-package lab_14_Homework;
+package lab_14_fileInput_Homework;
 
 public class Book {
     private String isbn;

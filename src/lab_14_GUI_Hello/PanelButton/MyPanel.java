@@ -1,4 +1,4 @@
-package lab_14_GUI_Hello.HelloJPanel;
+package lab_14_GUI_Hello.PanelButton;
 
 import javax.swing.*;
 import java.awt.*;

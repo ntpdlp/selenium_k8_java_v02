@@ -1,9 +1,62 @@
 package lab_03_loop_array;
 
+import java.lang.reflect.Array;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
 public class IntArray {
 
     public static void main(String[] args) {
 
+        ArrayList<String> names = new ArrayList<>(Arrays.asList("Ana","Peter","Bana"));
+        Collections.sort(names);
+        System.out.println(names);
+        class Dog{
+            protected String name;
+            protected int age;
+
+            private Dog(String name, int age){
+                this.name = name;
+                this.age = age;
+            }
+
+            @Override
+            public String toString() {
+                return "Dog{" +
+                        "name='" + name + '\'' +
+                        ", age=" + age +
+                        '}';
+            }
+        }
+
+        class Puppy extends Dog{
+            private String color;
+            private Puppy(String name, int age, String color) {
+                super(name, age);
+                this.color = color;
+            }
+
+            @Override
+            public String toString() {
+                return "Puppy{" +
+                        "color='" + color + '\'' +
+                        ", name='" + name + '\'' +
+                        ", age=" + age +
+                        '}';
+            }
+        }
+
+
+
+        Puppy lulu = new Puppy("Lulu",1,"orange");
+        System.out.println(lulu);
+
+
+    }
+
+    public final static void testArray() {
         byte arrayLen = 5;
 
         /*
@@ -38,9 +91,10 @@ public class IntArray {
         }
 
         //Enhanced For
-        String[] names = {"teo","ti","tun"};
+        String[] names = {"teo", "ti", "tun"};
         for (String name : names) {
             System.out.println(name);
         }
     }
+
 }

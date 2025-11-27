@@ -1,4 +1,4 @@
-package lab_14_GUI_Hello.MyPanel.MultipleWidgets.v01_1ListenerFor2Buttons;
+package lab_14_GUI_Hello.MyPanel.MultipleWidgets;
 
 import javax.swing.*;
 import java.awt.*;
