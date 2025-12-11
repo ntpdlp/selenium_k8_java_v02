@@ -1,6 +1,7 @@
-package lab_15_SwingSelfStudy.v01;
+package lab_15_SwingSelfStudy;
 
 import javax.swing.*;
+import java.io.*;
 
 public class Study01 {
     public static void main(String[] args) {
@@ -12,7 +13,10 @@ public class Study01 {
         frame.setTitle("Frame title goes here!");
 
         //ImageIcon
-        ImageIcon icon = new ImageIcon("../girlLogo.jpeg");
+        ImageIcon icon = new ImageIcon("./src/lab_15_SwingSelfStudy/girlLogo.jpeg");
         frame.setIconImage(icon.getImage());
+
+
+
     }
 }
