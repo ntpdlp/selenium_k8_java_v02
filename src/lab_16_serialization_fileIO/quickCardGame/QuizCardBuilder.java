@@ -62,18 +62,19 @@ public class QuizCardBuilder {
     }
 
     private void saveCard() {
+        //1. save to the cardList object
         String question = this.question.getText();
         String answer = this.answer.getText();
         QuizCard card = new QuizCard(question,answer);
         cardList.add(card);
         cardList.forEach(s -> System.out.println(s));
 
-        //save to file
+        //2. save to file
         JFileChooser fileSave = new JFileChooser();
         fileSave.showSaveDialog(frame);
-        File f = fileSave.getSelectedFile();
-        //System.out.println(f.getAbsolutePath());//use for debug
-        saveFile(f);
+        File file = fileSave.getSelectedFile();
+        System.out.println(file.getAbsolutePath());//use for debug
+        saveFile(file);
     }
 
     private void saveFile(File file) {
