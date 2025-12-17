@@ -1,4 +1,4 @@
-package lab_16_serialization_fileIO;
+package lab_16_serialization_fileIO.java_io_files;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -9,7 +9,7 @@ public class FileOuputStreamLearning {
     public static void main(String[] args) {
         try {
             FileOutputStream fileOutputStream =
-                    new FileOutputStream("./src/lab_16_serialization_fileIO/infor.MD");
+                    new FileOutputStream("./src/lab_16_serialization_fileIO/java_io_files/infor.MD");
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
             outputStreamWriter.write("hello world\n");
             outputStreamWriter.close();

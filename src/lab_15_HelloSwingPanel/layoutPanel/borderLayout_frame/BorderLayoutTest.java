@@ -1,4 +1,4 @@
-package lab_15_HelloSwing.layouts.flowLayout_panel.borderLayout_frame;
+package lab_15_HelloSwingPanel.layoutPanel.borderLayout_frame;
 
 import javax.swing.*;
 import java.awt.*;

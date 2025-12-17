@@ -78,18 +78,23 @@ public class QuizCardBuilder {
     }
 
     private void saveFile(File file) {
+        BufferedWriter writer = null;
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            ObjectOutputStream object = new ObjectOutputStream(fileOutputStream);
+            writer = new BufferedWriter(new FileWriter(file));
             for (QuizCard quizCard : cardList) {
-                object.writeObject(quizCard);
+                writer.write(quizCard.getQuestion() + "/");
+                writer.write(quizCard.getAnswer() + "\n");
             }
-            object.close();
-
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally{
+            try {
+                writer.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

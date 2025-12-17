@@ -1,17 +1,18 @@
-package lab_15_HelloSwing.layouts.flowLayout_panel;
+package lab_15_HelloSwingPanel.layoutPanel.boxLayout;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class FlowLayoutTest {
+public class BoxLayoutTest_Y {
     public static void main(String[] args) {
         /**
-         FlowLayout is the default of JPanel
-         Left to Right
+         JPanel need to setLayout() to BoxLayout because FlowLayout is the default of JPanel
          */
-        JFrame frame = new JFrame("FlowLayout is the default of JPanel");
+        JFrame frame = new JFrame("BoxLayout via setLayout()");
         JPanel panel = new JPanel();
         panel.setBackground(Color.BLUE);
+        //** BoxLayout
+        panel.setLayout(new BoxLayout(panel,BoxLayout.X_AXIS));
         JButton button_north = new JButton("North");
         JButton button_east = new JButton("East");
         JButton button_shock = new JButton("Shock Side By Side");

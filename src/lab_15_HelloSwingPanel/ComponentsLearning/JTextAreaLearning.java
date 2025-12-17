@@ -1,4 +1,4 @@
-package lab_15_HelloSwing.ComponentsLearning;
+package lab_15_HelloSwingPanel.ComponentsLearning;
 
 import javax.swing.*;
 import java.awt.*;
