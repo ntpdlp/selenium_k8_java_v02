@@ -1,4 +1,4 @@
-package lab_16_serialization_fileIO.serializationErrorSkip;
+package lab_16_serialization_fileIO.serializationTransientToSkipError;
 
 import java.io.*;
 
