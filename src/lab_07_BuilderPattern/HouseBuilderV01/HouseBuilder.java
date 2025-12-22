@@ -24,8 +24,6 @@ public class HouseBuilder {
                 '}';
     }
 
-    //2.Only GET methods
-
     //3.subclass with the same properties BUT for SET only
     public static class Builder{
         //properties

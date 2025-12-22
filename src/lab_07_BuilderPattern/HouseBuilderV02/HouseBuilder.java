@@ -6,30 +6,12 @@ public class HouseBuilder {
     private int doors = 2;
     private int windows = 5;
 
-
     protected HouseBuilder(Builder builder){
         this.houseColor = builder.houseColor;
         this.roofColor = builder.roofColor;
         this.doors = builder.doors;
         this.windows = builder.windows;
 
-    }
-
-    //READ ONLY
-    public String getHouseColor() {
-        return houseColor;
-    }
-
-    public String getRoofColor() {
-        return roofColor;
-    }
-
-    public int getDoors() {
-        return doors;
-    }
-
-    public int getWindows() {
-        return windows;
     }
 
     @Override

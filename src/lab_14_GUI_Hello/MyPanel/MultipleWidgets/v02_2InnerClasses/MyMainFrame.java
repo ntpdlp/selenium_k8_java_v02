@@ -14,7 +14,7 @@ public class MyMainFrame {
     private JButton changeLabelBtn;
     private JLabel label;
 
-    public void go(){
+    public void go() {
         frame = new JFrame("4 Widgets");
 
         //separately 2 Inner Class for ActionListener to 2 buttons
@@ -22,23 +22,22 @@ public class MyMainFrame {
         changeLabelBtn = new JButton("Change Label");
         changeCircleBtn.addActionListener(new ColorListener());
         changeLabelBtn.addActionListener(new LabelListener());
-        frame.getContentPane().add(BorderLayout.SOUTH,changeCircleBtn);
-        frame.getContentPane().add(BorderLayout.EAST,changeLabelBtn);
+        frame.getContentPane().add(BorderLayout.SOUTH, changeCircleBtn);
+        frame.getContentPane().add(BorderLayout.EAST, changeLabelBtn);
 
         //label
         label = new JLabel("I'm a label");
-        frame.getContentPane().add(BorderLayout.WEST,label);
+        frame.getContentPane().add(BorderLayout.WEST, label);
         //circle
         MyCircle circle = new MyCircle();
-        frame.getContentPane().add(BorderLayout.CENTER,circle);
+        frame.getContentPane().add(BorderLayout.CENTER, circle);
         //show frame
         frame.setVisible(true);
-        frame.setSize(500,400);
+        frame.setSize(500, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-
-    class ColorListener implements ActionListener{
+    class ColorListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -46,7 +45,7 @@ public class MyMainFrame {
         }
     }
 
-    class LabelListener implements ActionListener{
+    class LabelListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -58,6 +57,5 @@ public class MyMainFrame {
     public static void main(String[] args) {
         new MyMainFrame().go();
     }
-
 
 }
