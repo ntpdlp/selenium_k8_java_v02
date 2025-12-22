@@ -1,7 +1,5 @@
 package lab_08_ClassMemberStatic;
 
-import java.sql.SQLOutput;
-
 public class Cho {
 
     //co the override static variable

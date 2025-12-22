@@ -4,11 +4,11 @@ public class Integerint {
 
     public static void main(String[] args) {
         //convert between Integer <-> int
-        Integer X = 10;
-        int xx = X.intValue();
+        Integer x = 10;
+        int xx = x.intValue();
 
         int y = 5;
-        Integer YY = Integer.valueOf(y);
+        Integer yy = Integer.valueOf(y);
 
         //Autoboxing
         Integer[] arr = {10,5,9};
