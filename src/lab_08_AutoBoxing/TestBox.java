@@ -4,6 +4,7 @@ public class TestBox {
     private Integer i; //default = null
     private int j; //default = 0
 
+
     public static void main(String[] args) {
         new TestBox().go();
     }
