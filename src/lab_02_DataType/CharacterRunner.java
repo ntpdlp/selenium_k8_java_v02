@@ -19,7 +19,6 @@ public class CharacterRunner {
         return isVowelResult;
     }
 
-
     public boolean isNumber(){
         char[] numbers = {'0','1','2','3','4','5','6','7','8','9'};
         boolean flag = false;
@@ -42,14 +41,12 @@ public class CharacterRunner {
         }
     }
 
-
     public static void printUpperCaseAlphabets(){
         for(ch='A'; ch<='Z'; ch++){
             System.out.printf("%c\t",ch);
         }
         System.out.println();
     }
-
 
     public static void printLowerCaseAlphabets(){
         for(ch=97; ch<=122; ch++){
@@ -74,11 +71,6 @@ public class CharacterRunner {
 
         CharacterRunner myChar2 = new CharacterRunner('2');
         System.out.println(myChar2.toString() + " is number: " + myChar2.isNumber());
-
-        CharacterRunner myCharz = new CharacterRunner('z');
-        printUpperCaseAlphabet();
-        CharacterRunner myCharZ = new CharacterRunner('Z');
-        printUpperCaseAlphabet();
 
         printUpperCaseAlphabets();
         printLowerCaseAlphabets();

@@ -1,4 +1,4 @@
-package lab_03_ifelse;
+package lab_03_conditions;
 
 import java.util.Scanner;
 
@@ -16,7 +16,9 @@ public class MenuRunner {
         System.out.println("3. multiply");
         System.out.println("4. divide");
         System.out.println("Enter your choice: ");
-        int yourChoice = scanner.nextInt();
+        //TDD
+        int yourChoice = 30;
+        //int yourChoice = scanner.nextInt();
 
         switch (yourChoice){
             case 1:
@@ -35,4 +37,5 @@ public class MenuRunner {
                 System.out.println("please correct your choice: 1, 2, 3 or 4");
         }
     }
+
 }
