@@ -22,17 +22,17 @@ public class JavaRegEx_textReplace {
         BASIC
          */
         String userInput = "150mins"; //e.g cookingTime
-
-        String userValueFilter01 = userInput.replaceAll("[a-z|A-Z]",""); //remove tat ca ky tu a-z or A-Z.
+        //remove tat ca ky tu a-z or A-Z.
+        String userValueFilter01 = userInput.replaceAll("[a-z|A-Z]","");
         System.out.println(userValueFilter01); //150
-
-        String userValueFilter02 = userInput.replaceAll("[^0-9]",""); //tru so tu range 0-9, con lai replace rong.
+        //tru so tu range 0-9, con lai replace rong.
+        String userValueFilter02 = userInput.replaceAll("[^0-9]","");
         System.out.println(userValueFilter02); //150
 
 
         /*
         Ngu canh 2: Su dung Java Regular Expression
-        ADVANCED
+        ADVANCED: Pattern, Matcher
          */
         Pattern pattern = Pattern.compile("[^0-9]",Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher("150mins");

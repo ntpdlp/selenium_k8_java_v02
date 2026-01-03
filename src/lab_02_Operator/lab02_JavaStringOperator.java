@@ -6,77 +6,49 @@ import java.util.StringJoiner;
 public class lab02_JavaStringOperator {
 
     public static void main(String[] args) {
+        //basic operators
+        System.out.println("hello".charAt(2)); //l
+        System.out.println("hello".charAt(20)); //Exception StringIndexOutOfBoundsException
+        System.out.println("hello".indexOf('l'));  //2
+        System.out.println("hello".indexOf('9'));  //-1
+        System.out.println("hello".lastIndexOf('l'));  //3
+        System.out.println("hello".substring(2, 4));  //ll
+        System.out.println("hello".substring(10, 20));  //Exception StringIndexOutOfBoundsException
 
-        //charAt()
-        System.out.println("hello".charAt(2));
+        System.out.println("hello".startsWith("he")); //true
+        System.out.println("hello".startsWith("App")); //false
+        System.out.println("hello world".endsWith("world")); //true
+        System.out.println("hello world".endsWith("NOT")); //false
 
-        //subString
-        String name = new String("Robert");
-        System.out.println(name.substring(2,4));  //be
-        System.out.println(name.substring(0,0));  //
-        System.out.println(name.substring(0,name.length())); //Robert
+        System.out.println("Robert".equals("Robert")); //true
+        System.out.println("Robert".equals("Mike")); //false
+        System.out.println("Robert".equalsIgnoreCase("roBERT")); //true
+        System.out.println("hello word".contains("wor"));  //true
+        System.out.println("hello word".contains("baba"));  //false
+        System.out.println("a".compareTo("z"));//-25
+        System.out.println("z".compareTo("a"));//25
 
-        //indexOf(char c) , indexOf(String str)
-        System.out.println(name.indexOf('t')); //5
-        System.out.println(name.indexOf('d')); //-1
-        System.out.println(name.indexOf("Rob"));
+        //compare 2 strings in Java
+        //since a String variable does not hold a String value, it holds a reference to the instance of String
+        String s1 = "I love Java";
+        String s2 = "I";
+        s2 = s2.concat(" love Java"); //String Concatenation
+        System.out.println(s1 == s2); //false >> equals() && hashCode()
+        System.out.println(s1.equals(s2)); //true
 
-
-        //startsWith
-        System.out.println(name.startsWith("Rob")); //true
-        System.out.println(name.startsWith("App")); //false
-
-
-        //equals
-        System.out.println(name.equals("Robert")); //true
-
-        //StringJoiner
-        StringJoiner sj = new StringJoiner(",","[","]");
-        sj.add("Banana")
-                .add("Apple")
-                .add("Mango");
-
+        //String Joiner
+        StringJoiner sj = new StringJoiner(",", "[", "]");
+        sj.add("Banana").add("Apple").add("Mango"); //required java.lang.CharSequence
         System.out.println(sj.toString());
 
-        //compareTo used to sort String
-        System.out.println("a".compareTo("b"));
-
-
         //Format Console Output
-        /* %[arg$][flags][width][.precision]conversion
-            arg$: optional
-            flag: optional
-            width: optional
-            . : optional
-            conversion:
-                s: string
-                b or B: boolean
-                c or C: Unicode character
-                h or H: hexadecimal
-                o: octal integer
-                f: floating number
-                t or T: time or date
-                    D: Date representation as month/day/year
-                    c: full date and time
-                    H: 24 hour format
-                    I: 12 hour format
+        System.out.printf("%.2f\n", 1955.555698432f);  //1955.55
+        System.out.printf("%,10.2f\n", 1955.555698432f);//   1,955.55
+        System.out.printf("%10.0f\n", 1955.55f);//   1956  (no decimal digits)
 
-         */
-        System.out.printf("%f\n",1955.55f);    //1955.550049
-        System.out.printf("%.2f\n",1955.55f);  //1955.55
-        System.out.printf("%10.2f\n",1955.55f);//   1955.55
-        System.out.printf("%10.0f\n",1955.55f);//         1956  (no decimal digits)
-
-        int age = 18;
-        System.out.printf("Happy birthday %s, can't believe your age is %d\n",name,age);
-        String out = String.format("Happy birthday %s, can't believe your age is %d",name,age);
-        System.out.println(out);
-
-        String today01 = String.format("Today is %tD",new Date()); //Today is 07/28/25
-        String today02 = String.format("Today is %TD",new Date()); //Today is 07/28/25
-        String today03 = String.format("Today is %tc",new Date()); //Today is Mon Jul 28 16:28:16 PDT 2025
+        String today01 = String.format("Today is %tD", new Date()); //Today is 07/28/25
+        String today03 = String.format("Today is %tc", new Date()); //Today is Mon Jul 28 16:28:16 PDT 2025
         System.out.println(today01);
-        System.out.println(today02);
         System.out.println(today03);
 
         //split(), if using multiple separators then using a pipe | between them, use \\ before dot.
@@ -84,21 +56,5 @@ public class lab02_JavaStringOperator {
         for (String item : outputStrs) {
             System.out.println(item);
         }
-
-        //compare 2 strings in Java
-        //concept:
-        //since a String variable does not hold a String value, it holds a reference to the instance of String
-        String s1 = "I love";
-        s1 += " Java";
-
-        String s2 = "I";
-        s2 += " love Java";
-
-        System.out.println(s1==s2); //false
-        System.out.println(s1.equals(s2)); //true
-
-
-
-
     }
 }
