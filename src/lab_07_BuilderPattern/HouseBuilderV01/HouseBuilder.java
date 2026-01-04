@@ -16,12 +16,8 @@ public class HouseBuilder {
 
     @Override
     public String toString() {
-        return "HouseBuilder{" +
-                "houseColor='" + houseColor + '\'' +
-                ", roofColor='" + roofColor + '\'' +
-                ", doors=" + doors +
-                ", windows=" + windows +
-                '}';
+        return String.format("houseColor: %s, roofColor: %s, doors: %d, windows: %d",
+                houseColor,roofColor,doors,windows);
     }
 
     //3.subclass with the same properties BUT for SET only

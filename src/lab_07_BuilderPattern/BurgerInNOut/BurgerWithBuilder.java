@@ -1,6 +1,8 @@
 package lab_07_BuilderPattern.BurgerInNOut;
 
-public class BurgerWithBuilder {
+import java.io.Serializable;
+
+public class BurgerWithBuilder{
 
     private String protein = "beef";
     private boolean salad = true; //yes
@@ -43,13 +45,9 @@ public class BurgerWithBuilder {
 
     @Override
     public String toString() {
-        return "BurgerWithBuilder{" +
-                "protein='" + protein + '\'' +
-                ", salad=" + salad +
-                ", onion=" + onion +
-                ", tomato=" + tomato +
-                ", cheese=" + cheese +
-                '}';
+        return String.format("Burger with protein: %s, salad : %b, onion: %b, tomato: %b, cheese: %d",
+                protein,salad,onion,tomato,cheese);
+
     }
 
     ////////////////////////////////////////////////////////////////

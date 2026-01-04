@@ -7,10 +7,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        return String.format("name: %s, age: %d", name, age);
     }
 
     public void setName(String name) {

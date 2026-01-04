@@ -1,6 +1,8 @@
 package lab_06_OOPConcept.DrumKitApp;
 
-public class DrumKit {
+import java.io.Serializable;
+
+public class DrumKit{
     boolean topHat = true;
     boolean snare = true;
 
