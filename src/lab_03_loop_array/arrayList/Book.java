@@ -8,7 +8,7 @@ public class Book {
     private int id;
     private String title;
     private String author;
-    private ArrayList<Review> reviews;
+    private ArrayList<Review> reviews; //composition association type
 
     public Book(int id, String title, String author) {
         this.id = id;
