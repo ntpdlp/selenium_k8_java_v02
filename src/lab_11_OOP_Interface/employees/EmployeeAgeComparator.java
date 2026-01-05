@@ -1,4 +1,4 @@
-package lab_11_OOP_Interface;
+package lab_11_OOP_Interface.employees;
 
 import java.util.Comparator;
 

@@ -1,10 +1,9 @@
-package lab_11_OOP_Interface;
+package lab_11_OOP_Interface.employees;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-public class EmployeeController01 {
+public class EmployeeController02 {
 
     public static void main(String[] args) {
         Employee teo = new Employee("Teo",20);
@@ -13,7 +12,7 @@ public class EmployeeController01 {
 
         List<Employee> employeeList = Arrays.asList(teo,ti,tun);
 
-        Collections.sort(employeeList);
+        employeeList.sort(new EmployeeAgeComparator());
         System.out.println(employeeList);
 
 

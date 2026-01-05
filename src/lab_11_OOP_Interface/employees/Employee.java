@@ -1,4 +1,4 @@
-package lab_11_OOP_Interface;
+package lab_11_OOP_Interface.employees;
 
 public class Employee implements Comparable<Employee>{
     public String name;
