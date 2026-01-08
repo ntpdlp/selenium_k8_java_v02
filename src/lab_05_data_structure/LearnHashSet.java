@@ -1,35 +1,29 @@
 package lab_05_data_structure;
 
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class LearnHashSet {
 
     public static void main(String[] args) {
+        //Pre: provide input data
+        List<String> namesInputdata = List.of("Jamie","Peggy","Peggy","Tom","Mike","Adnan","Eman","Eman");
 
-        //common methods set: add(),remove(),contains(),size(),clear()
-        HashSet<String> names = new HashSet<>();
-        names.add("Jamie");
-        names.add("Peggy");
-        names.add("Tom");
-        names.add("Adnan");
-        names.add("Vovo");
-        System.out.println(names);
-        if (names.contains("Vovo")){
-            names.remove("Vovo");
-        }
+        //common methods basic HashSet no duplication
+        // add(),remove(),contains(),size(),clear()
+        Set<String> names = new HashSet<>(namesInputdata);
+        System.out.println(names);//[Jamie, Peggy, Mike, Tom, Eman, Adnan]
+        System.out.println("Size: " + names.size());//6
+        String isFound = names.contains("Vovo")?"found":"not found";
+        System.out.println("Finding 'Vovo' result? " + isFound);//not found
 
-        System.out.println("Size after removing : " + names.size());//4
+        //Want to see sorted result => use TreeSet
+        Set<String> orderedNames = new TreeSet<>(names);
+        System.out.println("A-Z: " + orderedNames);//[Adnan, Eman, Jamie, Mike, Peggy, Tom]
 
-        for (String name : names) {
-            System.out.println(name);
-        }
-        System.out.println("-----------------------");
-
-        //Iterator
-        Iterator<String> iternames = names.iterator();
-        while(iternames.hasNext()){
-            System.out.println(iternames.next());
-        }
+        //Want to insert faster O(1) => use LinkedHashSet
+        Set<String> updateNames = new LinkedHashSet<>(names);
+        updateNames.add("Coco");
+        updateNames.add("Ronadol");
+        System.out.println(updateNames);//[Jamie, Peggy, Mike, Tom, Eman, Adnan, Coco, Ronadol]
     }
 }
