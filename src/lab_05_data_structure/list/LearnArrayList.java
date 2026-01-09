@@ -1,4 +1,4 @@
-package lab_05_data_structure;
+package lab_05_data_structure.list;
 
 import java.util.ArrayList;
 import java.util.Collections;

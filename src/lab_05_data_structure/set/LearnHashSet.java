@@ -1,4 +1,4 @@
-package lab_05_data_structure;
+package lab_05_data_structure.set;
 
 import java.util.*;
 

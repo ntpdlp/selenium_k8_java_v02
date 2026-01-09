@@ -1,4 +1,4 @@
-package lab_05_data_structure;
+package lab_05_data_structure.map;
 
 import java.util.HashMap;
 import java.util.Map;
